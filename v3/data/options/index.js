@@ -1,3 +1,5 @@
+const i18n = key => chrome.i18n.getMessage(key) || '';
+
 const toast = document.getElementById('toast');
 const hostsBox = document.getElementById('hosts');
 const allSites = document.getElementById('all-sites');
@@ -90,7 +92,7 @@ document.getElementById('save').addEventListener('click', async () => {
     }
     catch (e) {
       console.error(e);
-      return notify('Policies Error: ' + e.message);
+      return notify(i18n('options_policies_error') + e.message);
     }
   }
   prefs.policies = policies;
@@ -106,7 +108,7 @@ document.getElementById('save').addEventListener('click', async () => {
     }
     else {
       console.info('Host is not valid', h, msg);
-      notify(h + ': ' + msg);
+      notify(chrome.i18n.getMessage('options_invalid_host', [h, msg]));
     }
   }
   // test all
@@ -122,14 +124,14 @@ document.getElementById('save').addEventListener('click', async () => {
     hostsBox.value = hosts.join(', ');
     syncAllSites();
     await chrome.storage.local.set(prefs);
-    notify('Options saved');
+    notify(i18n('options_saved'));
   }
 });
 
 // reset
 document.getElementById('reset').addEventListener('click', e => {
   if (e.detail === 1) {
-    notify('Double-click to reset!');
+    notify(i18n('options_reset_double_click'));
   }
   else {
     localStorage.clear();

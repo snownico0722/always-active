@@ -1,0 +1,181 @@
+{
+  "description": {
+    "message": "通过模拟页面可见状态等方式，让指定网站的后台标签页保持活跃。"
+  },
+  "action_title_enabled": {
+    "message": "已启用：当前标签页（网站：$HOST$）在后台时也保持活跃。点击可对 $HOST$ 停用。",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "action_title_disabled": {
+    "message": "未启用：点击后可让当前标签页（网站：$HOST$）在后台时保持活跃。",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "action_title_unknown": {
+    "message": "此标签页不受本扩展支持。请打开普通的 HTTP(S) 网站（如 youtube.com）后重试。"
+  },
+  "action_title_reload_recommended": {
+    "message": "更改已立即应用到当前标签页，建议重新加载以确保所有保护措施生效。"
+  },
+  "action_title_reload_required": {
+    "message": "页面目前仍受保护，需要重新加载才能应用更改。"
+  },
+  "title_star_note": {
+    "message": "网站列表中的“*”通配符会让扩展对所有网站生效。可以在设置页面中调整。"
+  },
+  "prompt_reload_recommended": {
+    "message": "更改已立即生效。是否重新加载页面，以使保护措施完全生效？\n\n如果跳过，部分页面级保护可能尚未生效。你也可以稍后手动刷新；在此之前扩展图标会显示 R 作为提醒。"
+  },
+  "prompt_reload_required": {
+    "message": "该标签页目前仍受保护，但你已将此网站从列表中移除。是否立即刷新页面以应用更改？"
+  },
+  "extension_name": {
+    "message": "窗口始终活跃 - 标签页始终可见"
+  },
+  "ui_language": {
+    "message": "zh-CN"
+  },
+  "action_default_title": {
+    "message": "切换当前网站在后台时是否保持活跃。扩展图标上的 ON/OFF 表示状态，R 表示建议或需要刷新；鼠标悬停可查看网站与启用状态。点击图标后，会尽可能立即对当前标签页应用更改。"
+  },
+  "options_title": {
+    "message": "设置 :: 窗口始终活跃"
+  },
+  "options_events": {
+    "message": "事件拦截设置（仅对已启用的网站生效）"
+  },
+  "options_visibility_state": {
+    "message": "覆写 document.visibilityState"
+  },
+  "options_hidden": {
+    "message": "覆写 document.hidden"
+  },
+  "options_blur": {
+    "message": "全局阻止 blur 事件"
+  },
+  "options_focus": {
+    "message": "全局阻止 focus 事件"
+  },
+  "options_visibility": {
+    "message": "全局阻止 visibility 事件"
+  },
+  "options_mouseleave": {
+    "message": "全局阻止 mouseleave 事件"
+  },
+  "options_mouseout": {
+    "message": "全局阻止 mouseout 事件"
+  },
+  "options_pointercapture": {
+    "message": "全局阻止 lostpointercapture 事件"
+  },
+  "options_fullscreen": {
+    "message": "页面进入后台时维持全屏状态（实验性）"
+  },
+  "options_redirect": {
+    "message": "页面进入后台时阻止 JavaScript 跳转"
+  },
+  "options_extra": {
+    "message": "其他设置"
+  },
+  "options_log": {
+    "message": "显示调试日志（仅用于排查问题）"
+  },
+  "options_faqs": {
+    "message": "更新后打开常见问题页面（推荐）"
+  },
+  "options_badge": {
+    "message": "在扩展按钮上显示 ON/OFF 状态标记"
+  },
+  "options_reload": {
+    "message": "切换状态时重新加载页面（旧版方式，会丢失未保存的数据）"
+  },
+  "options_hosts": {
+    "message": "生效网站列表"
+  },
+  "options_hosts_description": {
+    "message": "扩展生效的网站域名，多个域名用英文逗号分隔。你也可以点击扩展图标，添加或移除当前网站。支持用“*”对所有网站启用，但不推荐这样做，因为可能影响性能。建议仅对需要后台保持活跃的网站开启。例如：example.com、*.example.com、www.example.com"
+  },
+  "options_all_sites": {
+    "message": "对所有网站启用（将“*”通配符添加到列表；取消勾选则移除）"
+  },
+  "options_policies": {
+    "message": "网站例外规则"
+  },
+  "options_policies_description": {
+    "message": "使用 JSON 对象，为特定网站设置不拦截的事件，以避免功能冲突。例如：{\"docs.google.com\": [\"blur\"]}"
+  },
+  "options_support": {
+    "message": "支持开发者"
+  },
+  "options_report": {
+    "message": "反馈问题"
+  },
+  "options_test": {
+    "message": "测试规则"
+  },
+  "options_reset": {
+    "message": "恢复默认设置（双击）"
+  },
+  "options_save": {
+    "message": "保存设置"
+  },
+  "options_policies_error": {
+    "message": "网站例外规则错误："
+  },
+  "options_saved": {
+    "message": "设置已保存"
+  },
+  "options_reset_double_click": {
+    "message": "请双击以确认恢复默认设置！"
+  },
+  "guide_title": {
+    "message": "工作模式 :: 窗口始终活跃"
+  },
+  "guide_heading": {
+    "message": "工作模式"
+  },
+  "guide_legend": {
+    "message": "选择扩展的生效方式"
+  },
+  "guide_per_host": {
+    "message": "按网站启用：在想使用的网站标签页中点击一次扩展图标，也可以在设置页面中添加网站。"
+  },
+  "guide_entire": {
+    "message": "对所有标签页生效（旧版方式，不推荐）"
+  },
+  "guide_save": {
+    "message": "保存模式"
+  },
+  "error_invalid_tab_url": {
+    "message": "当前标签页没有有效的网站域名"
+  },
+  "error_hostname_not_found": {
+    "message": "无法获取当前标签页的网站域名"
+  },
+  "options_invalid_host": {
+    "message": "无效域名 $HOST$：$ERROR$",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "error_registration_failed": {
+    "message": "脚本注册失败：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1"
+      }
+    }
+  }
+}

@@ -2,78 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Options Page :: Always active Window</title>
+  <title data-i18n="options_title">Options Page :: Always active Window</title>
   <link rel="stylesheet" type="text/css" href="index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <h1>Options Page :: Always active Window</h1>
+  <h1 data-i18n="options_title">Options Page :: Always active Window</h1>
   <fieldset>
-    <legend><h2>Event blocking options (these options apply to enabled websites)</h2></legend>
+    <legend><h2 data-i18n="options_events">Event blocking options (these options apply to enabled websites)</h2></legend>
     <div class="grid">
       <div class="disabled" style="display: contents;">
-        <label for="visibilityState">Overwrite "document.visibilityState"</label>
+        <label for="visibilityState" data-i18n="options_visibility_state">Overwrite "document.visibilityState"</label>
         <input type="checkbox" id="visibilityState">
-        <label for="hidden">Overwrite "document.hidden"</label>
+        <label for="hidden" data-i18n="options_hidden">Overwrite "document.hidden"</label>
         <input type="checkbox" id="hidden">
       </div>
-      <label for="blur">Globally block "blur" events</label>
+      <label for="blur" data-i18n="options_blur">Globally block "blur" events</label>
       <input type="checkbox" id="blur">
-      <label for="focus">Globally block "focus" events</label>
+      <label for="focus" data-i18n="options_focus">Globally block "focus" events</label>
       <input type="checkbox" id="focus">
-      <label for="visibility">Globally block "visibility" events</label>
+      <label for="visibility" data-i18n="options_visibility">Globally block "visibility" events</label>
       <input type="checkbox" id="visibility">
-      <label for="mouseleave">Globally block "mouseleave" events</label>
+      <label for="mouseleave" data-i18n="options_mouseleave">Globally block "mouseleave" events</label>
       <input type="checkbox" id="mouseleave">
-      <label for="mouseout">Globally block "mouseout" events</label>
+      <label for="mouseout" data-i18n="options_mouseout">Globally block "mouseout" events</label>
       <input type="checkbox" id="mouseout">
-      <label for="pointercapture">Globally block "lostpointercapture" events</label>
+      <label for="pointercapture" data-i18n="options_pointercapture">Globally block "lostpointercapture" events</label>
       <input type="checkbox" id="pointercapture">
-      <label for="fullscreen">Protect fullscreen state when the page is hidden (experimental)</label>
+      <label for="fullscreen" data-i18n="options_fullscreen">Protect fullscreen state when the page is hidden (experimental)</label>
       <input type="checkbox" id="fullscreen">
       <div id="redirect-container">
-        <label for="redirect">Block JS redirection when page is hidden</label>
+        <label for="redirect" data-i18n="options_redirect">Block JS redirection when page is hidden</label>
         <input type="checkbox" id="redirect">
       </div>
     </div>
   </fieldset>
   <fieldset>
-    <legend><h2>Extra Options</h2></legend>
+    <legend><h2 data-i18n="options_extra">Extra Options</h2></legend>
     <div class="grid">
-      <label for="log">Display logs (for debugging purpose only)</label>
+      <label for="log" data-i18n="options_log">Display logs (for debugging purpose only)</label>
       <input type="checkbox" id="log">
-      <label for="faqs">Open FAQs page on updates (recommended)</label>
+      <label for="faqs" data-i18n="options_faqs">Open FAQs page on updates (recommended)</label>
       <input type="checkbox" id="faqs">
-      <label for="badge">Display the ON/OFF badge text on the extension button</label>
+      <label for="badge" data-i18n="options_badge">Display the ON/OFF badge text on the extension button</label>
       <input type="checkbox" id="badge">
-      <label for="reload">Reload the page when toggled (the old behavior; you lose unsaved data)</label>
+      <label for="reload" data-i18n="options_reload">Reload the page when toggled (the old behavior; you lose unsaved data)</label>
       <input type="checkbox" id="reload">
     </div>
   </fieldset>
 
-  <h2>List of Hostnames</h2>
-  <p id="hosts-description">List of hostnames where the extension is active, separated by commas. You can modify this list by clicking the action button to add or remove hostnames. Enabling the extension on all hostnames with "*" is possible but discouraged, as it may negatively impact performance. Instead, limit the extension's use to hostnames that require an active tab to function properly. Example: example.com, *.example.com, www.example.com</p>
+  <h2 data-i18n="options_hosts">List of Hostnames</h2>
+  <p id="hosts-description" data-i18n="options_hosts_description">List of hostnames where the extension is active, separated by commas. You can modify this list by clicking the action button to add or remove hostnames. Enabling the extension on all hostnames with "*" is possible but discouraged, as it may negatively impact performance. Instead, limit the extension's use to hostnames that require an active tab to function properly. Example: example.com, *.example.com, www.example.com</p>
   <textarea id="hosts" rows="8" placeholder="example.com, *.example.com, www.example.com" aria-describedby="hosts-description"></textarea>
   <div class="flex">
     <input type="checkbox" id="all-sites">
-    <label for="all-sites">Enable on all websites (adds the "*" wildcard to the list). Selecting this check box adds the wildcard; clearing it removes the wildcard.</label>
+    <label for="all-sites" data-i18n="options_all_sites">Enable on all websites (adds the "*" wildcard to the list). Selecting this check box adds the wildcard; clearing it removes the wildcard.</label>
   </div>
-  <h2><a data-href="faq6" target="_blank">Policies</a></h2>
-  <p id="policies-description">A JSON object to prevent blocking of some events that conflict with particular hostnames. Example: {"docs.google.com": ["blur"]}</p>
+  <h2><a data-href="faq6" target="_blank" data-i18n="options_policies">Policies</a></h2>
+  <p id="policies-description" data-i18n="options_policies_description">A JSON object to prevent blocking of some events that conflict with particular hostnames. Example: {"docs.google.com": ["blur"]}</p>
   <textarea id="policies" rows="10" placeholder='{
   "docs.google.com": ["blur"]
 }' aria-describedby="policies-description"></textarea>
 
   <p>
-    <input type="button" id="support" value="Support Development">
-    <input type="button" id="report" value="Report Bugs">
-    <input type="button" id="test" value="Test Rules">
+    <input type="button" id="support" data-i18n-value="options_support" value="Support Development">
+    <input type="button" id="report" data-i18n-value="options_report" value="Report Bugs">
+    <input type="button" id="test" data-i18n-value="options_test" value="Test Rules">
   </p>
   <div>
-    <input type="button" id="reset" value="Factory Reset (double-click)">
-    <input type="button" id="save" value="Save Options">
+    <input type="button" id="reset" data-i18n-value="options_reset" value="Factory Reset (double-click)">
+    <input type="button" id="save" data-i18n-value="options_save" value="Save Options">
     <span id="toast" role="status" aria-live="polite"></span>
   </div>
+  <script src="../i18n.js"></script>
   <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
