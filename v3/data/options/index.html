@@ -5,6 +5,8 @@
   <title data-i18n="options_title">Options Page :: Always active Window</title>
   <link rel="stylesheet" type="text/css" href="index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Localize before Chrome paints the page, while retaining English fallback markup. -->
+  <script src="../i18n.js" defer blocking="render"></script>
 </head>
 <body>
   <h1 data-i18n="options_title">Options Page :: Always active Window</h1>
@@ -74,7 +76,6 @@
     <input type="button" id="save" data-i18n-value="options_save" value="Save Options">
     <span id="toast" role="status" aria-live="polite"></span>
   </div>
-  <script src="../i18n.js"></script>
   <script type="text/javascript" src="index.js"></script>
 </body>
 </html>

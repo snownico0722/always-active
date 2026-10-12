@@ -168,7 +168,7 @@ const activate = () => {
       }
     }
     catch (e) {
-      notify(undefined, i18n('error_registration_failed', e.message));
+      notify(undefined, i18n('error_registration_failed'));
       console.error('Blocker Registration Failed', e);
     }
     for (const c of activate.actions) {

@@ -129,7 +129,7 @@
     "message": "Save Options"
   },
   "options_policies_error": {
-    "message": "Policies Error: "
+    "message": "Invalid policies JSON. Check the syntax."
   },
   "options_saved": {
     "message": "Options saved"
@@ -162,22 +162,17 @@
     "message": "Cannot find the hostname of this tab"
   },
   "options_invalid_host": {
-    "message": "Invalid hostname $HOST$: $ERROR$",
+    "message": "Cannot add website: $HOST$",
     "placeholders": {
       "host": {
         "content": "$1"
-      },
-      "error": {
-        "content": "$2"
       }
     }
   },
   "error_registration_failed": {
-    "message": "Blocker registration failed: $ERROR$",
-    "placeholders": {
-      "error": {
-        "content": "$1"
-      }
-    }
+    "message": "Failed to register background protection. Check the extension error log."
+  },
+  "options_invalid_hosts": {
+    "message": "Hostname list validation failed. Check the entries."
   }
 }

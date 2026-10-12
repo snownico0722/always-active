@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-i18n="guide_title">Operation Mode :: Always active Window</title>
   <link rel="stylesheet" type="text/css" href="index.css">
+  <!-- Localize before Chrome paints the page, while retaining English fallback markup. -->
+  <script src="../i18n.js" defer blocking="render"></script>
 </head>
 <body>
   <h1 data-i18n="guide_heading">Operation Mode</h1>
@@ -21,7 +23,6 @@
     <input type="button" value="Save Mode" id="save" data-i18n-value="guide_save">
   </p>
   <p id="status" role="status" aria-live="polite"></p>
-  <script src="../i18n.js"></script>
   <script type="text/javascript" src="index.js"></script>
 </body>
 </html>

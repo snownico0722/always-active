@@ -127,7 +127,7 @@
     "message": "保存设置"
   },
   "options_policies_error": {
-    "message": "网站例外规则错误："
+    "message": "例外规则 JSON 格式有误，请检查语法。"
   },
   "options_saved": {
     "message": "设置已保存"
@@ -160,22 +160,17 @@
     "message": "无法获取当前标签页的网站域名"
   },
   "options_invalid_host": {
-    "message": "无效域名 $HOST$：$ERROR$",
+    "message": "无法添加网站：$HOST$",
     "placeholders": {
       "host": {
         "content": "$1"
-      },
-      "error": {
-        "content": "$2"
       }
     }
   },
   "error_registration_failed": {
-    "message": "脚本注册失败：$ERROR$",
-    "placeholders": {
-      "error": {
-        "content": "$1"
-      }
-    }
+    "message": "无法启用后台保护，请在扩展管理页查看错误详情。"
+  },
+  "options_invalid_hosts": {
+    "message": "网站列表验证失败，请检查域名与通配符。"
   }
 }
