@@ -168,7 +168,7 @@ const activate = () => {
       }
     }
     catch (e) {
-      notify(undefined, 'Blocker Registration Failed: ' + e.message);
+      notify(undefined, i18n('error_registration_failed'));
       console.error('Blocker Registration Failed', e);
     }
     for (const c of activate.actions) {
@@ -198,7 +198,7 @@ chrome.action.onClicked.addListener(tab => chrome.storage.local.get({
   reload: false
 }, async prefs => {
   if (!tab.url?.startsWith('http')) {
-    return notify(tab.id, 'Tab does not have a valid hostname');
+    return notify(tab.id, i18n('error_invalid_tab_url'));
   }
 
   const {enabled, badge, reload: legacy} = prefs;
@@ -229,7 +229,7 @@ chrome.action.onClicked.addListener(tab => chrome.storage.local.get({
   const topEntry = (a || []).find(o => o.frameId === 0) || a[0] || {};
   const top = topEntry.result?.hostname;
   if (!top) {
-    return notify(tab.id, 'Cannot find the hostname of this tab');
+    return notify(tab.id, i18n('error_hostname_not_found'));
   }
   const topProtected = topEntry.result?.protected === true;
 

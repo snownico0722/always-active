@@ -37,5 +37,142 @@
   },
   "prompt_reload_required": {
     "message": "The tab is still protected, but this host has been removed from the list. Would you like to refresh to apply changes?"
+  },
+  "extension_name": {
+    "message": "Always active Window - Always Visible"
+  },
+  "ui_language": {
+    "message": "en"
+  },
+  "action_default_title": {
+    "message": "Toggle whether the current website stays active while its tab is in the background. The button announces the current state: the badge shows ON or OFF (R when a reload is recommended or required), and the button label (title) names the website and whether it is enabled. Clicking applies the change immediately to the open tab when possible."
+  },
+  "options_title": {
+    "message": "Options Page :: Always active Window"
+  },
+  "options_events": {
+    "message": "Event blocking options (these options apply to enabled websites)"
+  },
+  "options_visibility_state": {
+    "message": "Overwrite \"document.visibilityState\""
+  },
+  "options_hidden": {
+    "message": "Overwrite \"document.hidden\""
+  },
+  "options_blur": {
+    "message": "Globally block \"blur\" events"
+  },
+  "options_focus": {
+    "message": "Globally block \"focus\" events"
+  },
+  "options_visibility": {
+    "message": "Globally block \"visibility\" events"
+  },
+  "options_mouseleave": {
+    "message": "Globally block \"mouseleave\" events"
+  },
+  "options_mouseout": {
+    "message": "Globally block \"mouseout\" events"
+  },
+  "options_pointercapture": {
+    "message": "Globally block \"lostpointercapture\" events"
+  },
+  "options_fullscreen": {
+    "message": "Protect fullscreen state when the page is hidden (experimental)"
+  },
+  "options_redirect": {
+    "message": "Block JS redirection when page is hidden"
+  },
+  "options_extra": {
+    "message": "Extra Options"
+  },
+  "options_log": {
+    "message": "Display logs (for debugging purpose only)"
+  },
+  "options_faqs": {
+    "message": "Open FAQs page on updates (recommended)"
+  },
+  "options_badge": {
+    "message": "Display the ON/OFF badge text on the extension button"
+  },
+  "options_reload": {
+    "message": "Reload the page when toggled (the old behavior; you lose unsaved data)"
+  },
+  "options_hosts": {
+    "message": "List of Hostnames"
+  },
+  "options_hosts_description": {
+    "message": "List of hostnames where the extension is active, separated by commas. You can modify this list by clicking the action button to add or remove hostnames. Enabling the extension on all hostnames with \"*\" is possible but discouraged, as it may negatively impact performance. Instead, limit the extension's use to hostnames that require an active tab to function properly. Example: example.com, *.example.com, www.example.com"
+  },
+  "options_all_sites": {
+    "message": "Enable on all websites (adds the \"*\" wildcard to the list). Selecting this check box adds the wildcard; clearing it removes the wildcard."
+  },
+  "options_policies": {
+    "message": "Policies"
+  },
+  "options_policies_description": {
+    "message": "A JSON object to prevent blocking of some events that conflict with particular hostnames. Example: {\"docs.google.com\": [\"blur\"]}"
+  },
+  "options_support": {
+    "message": "Support Development"
+  },
+  "options_report": {
+    "message": "Report Bugs"
+  },
+  "options_test": {
+    "message": "Test Rules"
+  },
+  "options_reset": {
+    "message": "Factory Reset (double-click)"
+  },
+  "options_save": {
+    "message": "Save Options"
+  },
+  "options_policies_error": {
+    "message": "Invalid policies JSON. Check the syntax."
+  },
+  "options_saved": {
+    "message": "Options saved"
+  },
+  "options_reset_double_click": {
+    "message": "Double-click to reset!"
+  },
+  "guide_title": {
+    "message": "Operation Mode :: Always active Window"
+  },
+  "guide_heading": {
+    "message": "Operation Mode"
+  },
+  "guide_legend": {
+    "message": "Choose how the extension behaves"
+  },
+  "guide_per_host": {
+    "message": "Enable \"Always active Window\" for specific tabs by clicking the action button once for each desired tab or by visiting the option page."
+  },
+  "guide_entire": {
+    "message": "Work on all tabs (previous behavior) (not recommended)"
+  },
+  "guide_save": {
+    "message": "Save Mode"
+  },
+  "error_invalid_tab_url": {
+    "message": "Tab does not have a valid hostname"
+  },
+  "error_hostname_not_found": {
+    "message": "Cannot find the hostname of this tab"
+  },
+  "options_invalid_host": {
+    "message": "Cannot add website: $HOST$",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "error_registration_failed": {
+    "message": "Failed to register background protection. Check the extension error log."
+  },
+  "options_invalid_hosts": {
+    "message": "Hostname list validation failed. Check the entries."
   }
 }
